@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>نموذج تقييم الموظفين</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+  <div class="container">
+    <h1>نموذج تقييم الموظفين</h1>
+
+    <!-- عرض التاريخ والوقت -->
+    <div class="date-time">
+      <p id="gregorian-date"></p>
+      <p id="hijri-date"></p>
+      <p id="current-day"></p>
+      <p id="current-time"></p>
+      <p id="shift-time"></p>
+    </div>
+
+    <!-- زر بدء التقييم -->
+    <button id="start-timer" class="start-btn">ابدأ التقييم</button>
+    <div id="timer-display">الوقت: 00:00:00</div>
+
+    <!-- نموذج التقييم -->
+    <form id="employee-evaluation-form">
+      <!-- بيانات الموظف -->
+      <div class="employee-info">
+        <label for="employee-name">اسم الموظف</label>
+        <input type="text" id="employee-name" name="employee-name" placeholder="أدخل اسم الموظف" required>
+
+        <label for="evaluator-name">اسم المقيم</label>
+        <input type="text" id="evaluator-name" name="evaluator-name" placeholder="أدخل اسم المقيم" required>
+      </div>
+
+      <!-- تقييمات -->
+      <div class="evaluation-section">
+        <label for="work-management">إدارة العمل اليومي</label>
+        <input type="range" id="work-management" name="work-management" min="1" max="10" value="5" class="slider">
+        <span class="evaluation-text">جيد</span>
+      </div>
+
+      <div class="evaluation-section">
+        <label for="financial-organization">التنظيم والإدارة المالية</label>
+        <input type="range" id="financial-organization" name="financial-organization" min="1" max="10" value="5" class="slider">
+        <span class="evaluation-text">جيد</span>
+      </div>
+
+      <div class="evaluation-section">
+        <label for="knowledge-skills">المعرفة والمهارات الشخصية</label>
+        <input type="range" id="knowledge-skills" name="knowledge-skills" min="1" max="10" value="5" class="slider">
+        <span class="evaluation-text">جيد</span>
+      </div>
+
+      <div class="evaluation-section">
+        <label for="application-closing">التقفيلة والتطبيقات</label>
+        <input type="range" id="application-closing" name="application-closing" min="1" max="10" value="5" class="slider">
+        <span class="evaluation-text">جيد</span>
+      </div>
+
+      <div class="evaluation-section">
+        <label for="attendance">الحضور والانصراف</label>
+        <input type="range" id="attendance" name="attendance" min="1" max="10" value="5" class="slider">
+        <span class="evaluation-text">جيد</span>
+      </div>
+
+      <div class="evaluation-section">
+        <label for="dress-code">الزي الرسمي والمظهر</label>
+        <input type="range" id="dress-code" name="dress-code" min="1" max="10" value="5" class="slider">
+        <span class="evaluation-text">جيد</span>
+      </div>
+
+      <div class="evaluation-section">
+        <label for="product-knowledge">المعرفة بالمنتجات</label>
+        <input type="range" id="product-knowledge" name="product-knowledge" min="1" max="10" value="5" class="slider">
+        <span class="evaluation-text">جيد</span>
+      </div>
+
+      <div class="evaluation-section">
+        <label for="work-quality">جودة العمل</label>
+        <input type="range" id="work-quality" name="work-quality" min="1" max="10" value="5" class="slider">
+        <span class="evaluation-text">جيد</span>
+      </div>
+
+      <div class="evaluation-section">
+        <label for="work-pressure">تحمل ضغوط العمل</label>
+        <input type="range" id="work-pressure" name="work-pressure" min="1" max="10" value="5" class="slider">
+        <span class="evaluation-text">جيد</span>
+      </div>
+
+      <div class="evaluation-section">
+        <label for="commitment">الالتزام بتوجيهات</label>
+        <input type="range" id="commitment" name="commitment" min="1" max="10" value="5" class="slider">
+        <span class="evaluation-text">جيد</span>
+      </div>
+
+      <!-- ملاحظات -->
+      <label for="comments">ملاحظات</label>
+      <textarea id="comments" name="comments" rows="4" placeholder="أدخل ملاحظاتك هنا"></textarea>
+
+      <button type="submit" class="submit-btn">إرسال التقييم</button>
+    </form>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+
+</html>
